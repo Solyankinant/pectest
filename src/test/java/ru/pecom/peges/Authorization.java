@@ -22,6 +22,7 @@ public class Authorization extends BasePage {
 
     public void authorizationPecLk(String login, String password) {
         buttonClickCss(locatorButtonLK);
+        waitElement(locatorFieldLogin);
         inputSendKeysCss(locatorFieldLogin, login);
         waitElement(locatorFieldPassword);
         inputSendKeysCss(locatorFieldPassword, password);
