@@ -7,7 +7,7 @@ public class FooterTest extends BaseTest{
     @Test
     public void footerSite(){
 
-        getAuthorization().authorizationPecLk("pecomtest1","pecomtest1");
+        //getAuthorization().authorizationPecLk("pecomtest1","pecomtest1");
         getFooter().moveToFooter();
         //System.out.println(driver.findElement(By.cssSelector(".footer-second-menu")).getText());
         Assert.assertEquals(getFooter().contentMenuFooter(),getFooter().menuFooter);
