@@ -62,26 +62,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="8" />
-          <entry key="xml" value="2" />
+          <entry key="java" value="9" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="8" />
-          <entry key="XML" value="2" />
+          <entry key="JAVA" value="9" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="43" />
-          <entry key="xml" value="16" />
+          <entry key="java" value="44" />
+          <entry key="xml" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="43" />
-          <entry key="XML" value="16" />
+          <entry key="JAVA" value="44" />
+          <entry key="XML" value="19" />
         </counts>
       </usages-collector>
     </session>
@@ -91,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/test/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+            <state relative-caret-position="468">
+              <caret line="54" column="1" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,20 +100,65 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/peges/BasePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="50" column="62" lean-forward="true" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
+            <state relative-caret-position="434">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/peges/Footer.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/authoriz/AuthorizationLevelStandard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+            <state>
+              <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/authoriz/AuthorizationLevelExtended.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testng.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/peges/Authorization.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="26" column="57" lean-forward="true" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -164,12 +209,14 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/pecom/peges/Footer.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/pecom/test/EventFeedNewsTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/pecom/test/AuthorizationLevelExtended.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/pecom/test/AuthorizationLevelStandard.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/pecom/test/FildSearchTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/pecom/test/FloatingButtonsTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/pecom/test/MenuTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/pecom/test/FooterTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/pecom/test/AuthorizationLevelStandard.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/pecom/authoriz/AuthorizationLevelStandard.java" />
+        <option value="$PROJECT_DIR$/testng.xml" />
       </list>
     </option>
   </component>
@@ -251,6 +298,15 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pecom" type="462c0819:PsiDirectoryNode" />
+              <item name="authoriz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pectest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pectest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pecom" type="462c0819:PsiDirectoryNode" />
               <item name="peges" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -269,7 +325,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539162234323" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539167488949" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="C:/autotest" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -294,7 +350,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.EventFeedNewsTest">
+  <component name="RunManager" selected="TestNG.AuthorizationLevelStandard">
+    <configuration name="AuthorizationLevelExtended" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="pek.autotest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.pecom.authoriz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.pecom.test" />
+      <option name="MAIN_CLASS_NAME" value="ru.pecom.authoriz.AuthorizationLevelExtended" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationLevelStandard" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="pek.autotest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.pecom.authoriz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.pecom.test" />
+      <option name="MAIN_CLASS_NAME" value="ru.pecom.authoriz.AuthorizationLevelStandard" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EventFeedNewsTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="pekautotest" />
       <extension name="coverage">
@@ -311,22 +399,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FloatingButtonsTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="pekautotest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.FloatingButtonsTest" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FooterTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="pekautotest" />
       <extension name="coverage">
@@ -337,22 +409,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="Test" />
       <option name="MAIN_CLASS_NAME" value="Test.FooterTest" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MenuTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="pekautotest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.MenuTest" />
       <properties />
       <listeners />
       <method v="2">
@@ -377,18 +433,18 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.Test" />
-      <item itemvalue="TestNG.MenuTest" />
-      <item itemvalue="TestNG.FloatingButtonsTest" />
       <item itemvalue="TestNG.FooterTest" />
       <item itemvalue="TestNG.EventFeedNewsTest" />
+      <item itemvalue="TestNG.AuthorizationLevelExtended" />
+      <item itemvalue="TestNG.AuthorizationLevelStandard" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AuthorizationLevelStandard" />
+        <item itemvalue="TestNG.AuthorizationLevelExtended" />
         <item itemvalue="TestNG.EventFeedNewsTest" />
         <item itemvalue="TestNG.Test" />
         <item itemvalue="TestNG.FooterTest" />
-        <item itemvalue="TestNG.FloatingButtonsTest" />
-        <item itemvalue="TestNG.MenuTest" />
       </list>
     </recent_temporary>
   </component>
@@ -406,12 +462,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FloatingButtonsTest - 2018.10.09 at 17h 22m 37s.xml">
-      <configuration name="FloatingButtonsTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="FooterTest - 2018.10.09 at 17h 31m 59s.xml">
-      <configuration name="FooterTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="FooterTest - 2018.10.09 at 17h 33m 48s.xml">
       <configuration name="FooterTest" configurationId="TestNG" />
     </history-entry>
@@ -436,6 +486,12 @@
     <history-entry file="EventFeedNewsTest - 2018.10.10 at 09h 28m 16s.xml">
       <configuration name="EventFeedNewsTest" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="AuthorizationLevelExtended - 2018.10.10 at 13h 30m 44s.xml">
+      <configuration name="AuthorizationLevelExtended" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AuthorizationLevelStandard - 2018.10.10 at 13h 31m 03s.xml">
+      <configuration name="AuthorizationLevelStandard" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -450,7 +506,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -484,8 +540,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/peges/BasePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        <state relative-caret-position="434">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -499,27 +555,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/test/AuthorizationLevelStandard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/test/EventFeedNewsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/peges/Authorization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -560,16 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/test/AuthorizationLevelExtended.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/peges/Footer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
@@ -582,8 +611,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/test/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+        <state relative-caret-position="468">
+          <caret line="54" column="1" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/peges/Authorization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="57" lean-forward="true" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/authoriz/AuthorizationLevelStandard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/pecom/authoriz/AuthorizationLevelExtended.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -592,8 +651,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="50" column="62" lean-forward="true" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
+        <state relative-caret-position="238">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>

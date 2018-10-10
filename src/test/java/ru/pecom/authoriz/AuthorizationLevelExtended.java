@@ -1,7 +1,8 @@
-package ru.pecom.test;
+package ru.pecom.authoriz;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import ru.pecom.test.BaseTest;
 
 public class AuthorizationLevelExtended extends BaseTest {
 

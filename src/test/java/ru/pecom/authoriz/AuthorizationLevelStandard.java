@@ -1,9 +1,10 @@
-package ru.pecom.test;
+package ru.pecom.authoriz;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import ru.pecom.test.BaseTest;
 
-public class AuthorizationLevelStandard extends BaseTest{
+public class AuthorizationLevelStandard extends BaseTest {
 
     @Test
     public void AuthorizationPec(){
@@ -12,7 +13,6 @@ public class AuthorizationLevelStandard extends BaseTest{
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorButtonLK), "Выйти");
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorLevelUser), "СТАНДАРТНЫЙ");
         getAuthorization().exitLk();
-
 
     }
 }
