@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="ru.pecom.authoriz by packages">
+<suite name="ru.pecom.authoriz by package">
     <test verbose="2" name="ru.pecom.authoriz">
         <packages>
             <package name="ru.pecom.authoriz"/>
