@@ -35,8 +35,8 @@ public class BasePage {
         locator.click();
     }
 
-    public void waitElement(String locator, WebDriver driver, int timeout) {
-        final WebDriverWait wait = new WebDriverWait(driver, timeout);
+    public void waitElement(String locator) {
+        final WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(locator)));
         //locator.click();
     }

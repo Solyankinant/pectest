@@ -13,7 +13,7 @@ public class Authorization extends BasePage {
     protected String locatorButtonEnterLK = ".col-md-9 .btn-primary";
     /*@FindBy(css = ".lk-menu")
     private WebElement locatorLkMenu;*/
-    String le = ".lk-menu";
+    String menuLK = ".lk-menu";
 
     public Authorization(WebDriver driver) {
         super(driver);
@@ -25,7 +25,7 @@ public class Authorization extends BasePage {
         inputSendKeysCss(locatorFieldLogin, login);
         inputSendKeysXpath(locatorFieldPassword, password);
         buttonClickCss(locatorButtonEnterLK);
-        waitElement(le,driver,10);
+        waitElement(menuLK);
     }
 
     public void exitLk() {
