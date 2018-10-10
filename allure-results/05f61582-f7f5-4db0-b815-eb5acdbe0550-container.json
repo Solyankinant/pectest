@@ -1,0 +1,1 @@
+{"uuid":"05f61582-f7f5-4db0-b815-eb5acdbe0550","name":"Test.BaseTest.closseBrauser","description":"","start":1539159468835,"stop":1539159470020,"children":["db6a4f88-3300-4213-96b7-fdd77f4adcf0"],"afters":[{"name":"closseBrauser","status":"passed","stage":"finished","description":"","start":1539159468835,"stop":1539159470020}]}
