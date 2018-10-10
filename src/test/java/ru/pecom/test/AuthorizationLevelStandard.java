@@ -1,4 +1,4 @@
-package ru.pecom.authoriz;
+package ru.pecom.test;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
