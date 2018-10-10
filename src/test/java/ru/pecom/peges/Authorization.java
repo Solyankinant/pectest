@@ -9,7 +9,7 @@ public class Authorization extends BasePage {
     public String locatorButtonLK = ".buttonOpenLK";
     public String locatorLevelUser = ".block-level span";
     protected String locatorFieldLogin = ".form-control-pecom";
-    protected String locatorFieldPassword = "//input[@type=\"password\"]";
+    protected String locatorFieldPassword = "input[type=\"password\"]";
     protected String locatorButtonEnterLK = ".col-md-9 .btn-primary";
     /*@FindBy(css = ".lk-menu")
     private WebElement locatorLkMenu;*/
@@ -23,7 +23,8 @@ public class Authorization extends BasePage {
     public void authorizationPecLk(String login, String password) {
         buttonClickCss(locatorButtonLK);
         inputSendKeysCss(locatorFieldLogin, login);
-        inputSendKeysXpath(locatorFieldPassword, password);
+        waitElement(locatorFieldPassword);
+        inputSendKeysCss(locatorFieldPassword, password);
         buttonClickCss(locatorButtonEnterLK);
         waitElement(menuLK);
     }
