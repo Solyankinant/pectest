@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -34,10 +35,9 @@ public class BasePage {
         locator.click();
     }
 
-    public void waitElement(WebElement locator, WebDriver driver, int timeout) {
+    public void waitElement(String locator, WebDriver driver, int timeout) {
         final WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(ExpectedConditions.refreshed(
-                ExpectedConditions.elementToBeClickable(locator)));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(locator)));
         //locator.click();
     }
 

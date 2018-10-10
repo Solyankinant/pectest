@@ -15,7 +15,7 @@ public class FloatingButtonsTest extends BaseTest{
 
     @Test
     public void testFloatingButtons(){
-        //openSitePec();
+
         driver.findElement(By.cssSelector(".pm")).click();
         openStartPage();
         driver.findElement(By.cssSelector(".wb_2")).click();
@@ -24,7 +24,7 @@ public class FloatingButtonsTest extends BaseTest{
         //Assert.assertEquals(driver.findElement(By.cssSelector(".lt-welcome .lt-chat-header span")).getText(),text);
 
         driver.findElement(By.cssSelector(".lt-wrapper-close")).click();*/
-        //closseBrauser();
+
 
 
 

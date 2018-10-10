@@ -24,7 +24,7 @@ public class MenuTest extends BaseTest {
     @Test
     public void HatSite() {
 
-        //openSitePec();
+
         driver.findElement(By.cssSelector(".logo"));
         driver.findElement(By.cssSelector(".city-name"));
         driver.findElement(By.cssSelector(".fa-location-arrow"));
@@ -37,7 +37,7 @@ public class MenuTest extends BaseTest {
 //        System.out.println(driver.findElement(By.cssSelector(".top-nav")).getText());
 
 
-        //closseBrauser();
+        
 
     }
 

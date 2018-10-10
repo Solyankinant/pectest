@@ -9,10 +9,10 @@ public class FildSearchTest extends BaseTest {
 
     @Test
     public void fildSearch() {
-        //openSitePec();
+
         getFieldSearchCargoInMenu().inputCodeCargoInFieldSearch();
         getFieldSearchCargoInMenu().resultSearchCargo();
-        //closseBrauser();
+
 
     }
 }
