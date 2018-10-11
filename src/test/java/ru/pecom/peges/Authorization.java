@@ -22,12 +22,12 @@ public class Authorization extends BasePage {
 
     public void authorizationPecLk(String login, String password) {
         buttonClickCss(locatorButtonLK);
-        waitElement(locatorFieldLogin);
+        waitElement(locatorFieldLogin,10);
         inputSendKeysCss(locatorFieldLogin, login);
-        waitElement(locatorFieldPassword);
+        waitElement(locatorFieldPassword,10);
         inputSendKeysCss(locatorFieldPassword, password);
         buttonClickCss(locatorButtonEnterLK);
-        waitElement(menuLK);
+        waitElement(menuLK,10);
     }
 
     public void exitLk() {

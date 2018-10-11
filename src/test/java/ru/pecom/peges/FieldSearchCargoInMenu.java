@@ -22,7 +22,7 @@ public class FieldSearchCargoInMenu extends BasePage {
     }
 
     public void resultSearchCargo(){
-        buttonClickCss(loactorResultSearchCargo);
+        waitElement(loactorResultSearchCargo,15);
 
     }
 

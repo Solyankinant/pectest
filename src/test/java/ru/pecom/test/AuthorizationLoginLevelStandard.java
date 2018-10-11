@@ -4,12 +4,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.pecom.test.BaseTest;
 
-public class AuthorizationLevelStandard extends BaseTest {
+public class AuthorizationLoginLevelStandard extends BaseTest {
+    private String login = "pecomtest1";
 
     @Test
-    public void AuthorizationPec(){
+    public void AuthorizationPecTest(){
 
-        getAuthorization().authorizationPecLk("pecomtest1", "pecomtest1");
+        getAuthorization().authorizationPecLk(login, "pecomtest1");
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorButtonLK), "Выйти");
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorLevelUser), "СТАНДАРТНЫЙ");
         getAuthorization().exitLk();

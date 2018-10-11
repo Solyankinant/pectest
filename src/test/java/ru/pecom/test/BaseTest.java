@@ -21,7 +21,7 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         authorization = new Authorization(driver);
         fieldSearchCargoInMenu = new FieldSearchCargoInMenu(driver);
         footer = new Footer(driver);
