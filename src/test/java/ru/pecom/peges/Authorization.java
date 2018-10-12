@@ -8,9 +8,12 @@ public class Authorization extends BasePage {
     WebDriver driver;
     public String locatorButtonLK = ".buttonOpenLK";
     public String locatorLevelUser = ".block-level span";
-    protected String locatorFieldLogin = ".form-control-pecom";
-    protected String locatorFieldPassword = "input[type=\"password\"]";
-    protected String locatorButtonEnterLK = ".col-md-9 .btn-primary";
+    public String locatorFieldLogin = ".form-control-pecom";
+    public String locatorFieldPassword = "input[type=\"password\"]";
+    public String locatorButtonEnterLK = ".col-md-9 .btn-primary";
+    public String titlewindow = ".modal-title";
+    public String textNotification = ".col-md-9 p:nth-of-type(1)";
+    public  String filedInputPhone = ".input_phone";
     /*@FindBy(css = ".lk-menu")
     private WebElement locatorLkMenu;*/
     String menuLK = ".lk-menu";
@@ -20,11 +23,12 @@ public class Authorization extends BasePage {
         this.driver = driver;
     }
 
-    public void authorizationPecLk(String login, String password) {
-        buttonClickCss(locatorButtonLK);
-        waitElement(locatorFieldLogin,10);
-        inputSendKeysCss(locatorFieldLogin, login);
-        waitElement(locatorFieldPassword,10);
+    public void authorizationPecLk(String locatorField, String firstCharacter, String login, String password) {
+        waitElement(locatorFieldLogin,5);
+        inputSendKeysCss(locatorFieldLogin, firstCharacter);
+        waitElement(locatorField,5);
+        inputSendKeysCss(locatorField, login);
+        waitElement(locatorFieldPassword,5);
         inputSendKeysCss(locatorFieldPassword, password);
         buttonClickCss(locatorButtonEnterLK);
         waitElement(menuLK,10);
