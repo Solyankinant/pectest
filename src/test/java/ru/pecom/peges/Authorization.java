@@ -1,16 +1,15 @@
 package ru.pecom.peges;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 public class Authorization extends BasePage {
     WebDriver driver;
-    public String locatorButtonLK = ".buttonOpenLK";
+    public String locatorButtonOpenLK = ".buttonOpenLK";
     public String locatorLevelUser = ".block-level span";
-    public String locatorFieldLogin = ".form-control-pecom";
+    public String locatorFieldInputLogin = ".form-control-pecom";
     public String locatorFieldPassword = "input[type=\"password\"]";
     public String locatorButtonEnterLK = ".col-md-9 .btn-primary";
+    public String locatorIconClose = ".close span";
     public String titlewindow = ".modal-title";
     public String textNotification = ".col-md-9 p:nth-of-type(1)";
     public  String filedInputPhone = ".input_phone";
@@ -27,8 +26,8 @@ public class Authorization extends BasePage {
     }
 
     public void authorizationPecLk(String locatorField, String firstCharacter, String login, String password) {
-        waitElement(locatorFieldLogin,5);
-        inputSendKeysCss(locatorFieldLogin, firstCharacter);
+        waitElement(locatorFieldInputLogin,5);
+        inputSendKeysCss(locatorFieldInputLogin, firstCharacter);
         waitElement(locatorField,5);
         inputSendKeysCss(locatorField, login);
         waitElement(locatorFieldPassword,5);
@@ -38,7 +37,7 @@ public class Authorization extends BasePage {
     }
 
     public void exitLk() {
-        buttonClickCss(locatorButtonLK);
+        buttonClickCss(locatorButtonOpenLK);
     }
 
 }

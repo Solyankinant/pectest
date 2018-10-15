@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -39,6 +37,10 @@ public class BasePage {
         final WebDriverWait wait = new WebDriverWait(driver,timeOut);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(locator)));
         //locator.click();
+    }
+
+    public String getAttribute(String locatorCss, String attribute){
+        return driver.findElement(By.cssSelector(locatorCss)).getAttribute(attribute);
     }
 
 
