@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class WindowAuthorization extends BaseTest {
     @Test
     public void windowAtuhorizationTest() {
-        getAuthorization().buttonClickCss(getAuthorization().locatorButtonOpenLK);
+        getAuthorization().openWindowAthorization();
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().titlewindow), "АВТОРИЗАЦИЯ");
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorIconClose), "×");
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().textNotification), "Если у вас ещё нет логина, зарегистрируйтесь");

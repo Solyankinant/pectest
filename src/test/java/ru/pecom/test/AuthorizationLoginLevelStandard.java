@@ -8,7 +8,7 @@ public class AuthorizationLoginLevelStandard extends BaseTest {
 
     @Test
     public void AuthorizationPecTest() {
-        getAuthorization().buttonClickCss(getAuthorization().locatorButtonOpenLK);
+        getAuthorization().openWindowAthorization();
         getAuthorization().authorizationPecLk(getAuthorization().locatorFieldInputLogin, "p", "ecomtest1", "pecomtest1");
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorButtonOpenLK), "Выйти");
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorLevelUser), "СТАНДАРТНЫЙ");
