@@ -16,7 +16,7 @@ public class BaseTest {
     private Footer footer;
     private EventsFeed eventsFeed;
 
-@BeforeMethod
+    @BeforeMethod
     public void openSitePec() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
@@ -29,11 +29,11 @@ public class BaseTest {
         driver.get("http://192.168.111.62/#/");
     }
 
-    public void openStartPage(){
+    public void openStartPage() {
         driver.get("http://192.168.111.62/#/");
     }
 
-@AfterMethod
+    @AfterMethod
     public void closseBrauser() {
         driver.quit();
     }
@@ -46,10 +46,13 @@ public class BaseTest {
         return fieldSearchCargoInMenu;
     }
 
-    public Footer getFooter(){
+    public Footer getFooter() {
         return footer;
     }
-    public EventsFeed getEventsFeed(){return eventsFeed; }
+
+    public EventsFeed getEventsFeed() {
+        return eventsFeed;
+    }
 
 
 }

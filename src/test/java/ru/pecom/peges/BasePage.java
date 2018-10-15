@@ -15,12 +15,6 @@ public class BasePage {
         this.driver = driver;
     }
 
-
-
-    /*public PageCompariGoods(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-    }*/
-
     public void moveTo(WebElement element) {
         Actions action = new Actions(driver);
         action.moveToElement(element).perform();
@@ -34,12 +28,11 @@ public class BasePage {
     }
 
     public void waitElement(String locator, int timeOut) {
-        final WebDriverWait wait = new WebDriverWait(driver,timeOut);
+        final WebDriverWait wait = new WebDriverWait(driver, timeOut);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(locator)));
-        //locator.click();
     }
 
-    public String getAttribute(String locatorCss, String attribute){
+    public String getAttribute(String locatorCss, String attribute) {
         return driver.findElement(By.cssSelector(locatorCss)).getAttribute(attribute);
     }
 
@@ -60,7 +53,7 @@ public class BasePage {
         driver.findElement(By.xpath(locator)).sendKeys(text);
     }
 
-    public  String  getTextCss(String locator){
+    public String getTextCss(String locator) {
         return driver.findElement(By.cssSelector(locator)).getText();
     }
 

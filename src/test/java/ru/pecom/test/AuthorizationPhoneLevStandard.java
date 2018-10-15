@@ -4,12 +4,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AuthorizationPhoneLevStandard extends BaseTest {
-    private String phone = "8005553535";
+
+
     @Test
-    public void AuthorizationPhoneTest(){
+    public void AuthorizationPhoneTest() {
 
         getAuthorization().buttonClickCss(getAuthorization().locatorButtonOpenLK);
-        getAuthorization().authorizationPecLk(getAuthorization().filedInputPhone,"9",phone, "pecomtest1");
+        getAuthorization().authorizationPecLk(getAuthorization().filedInputPhone, "9", "8005553535", "pecomtest1");
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorButtonOpenLK), "Выйти");
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorLevelUser), "СТАНДАРТНЫЙ");
         getAuthorization().exitLk();

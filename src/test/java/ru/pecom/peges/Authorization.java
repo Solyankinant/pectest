@@ -12,12 +12,9 @@ public class Authorization extends BasePage {
     public String locatorIconClose = ".close span";
     public String titlewindow = ".modal-title";
     public String textNotification = ".col-md-9 p:nth-of-type(1)";
-    public  String filedInputPhone = ".input_phone";
+    public String filedInputPhone = ".input_phone";
     public String textButtonEnter = ".login-col-2 span";
     public String linkLosePassword = ".login-col-1 p:nth-of-type(2) ";
-
-    /*@FindBy(css = ".lk-menu")
-    private WebElement locatorLkMenu;*/
     public String menuLK = ".lk-menu";
 
     public Authorization(WebDriver driver) {
@@ -26,14 +23,14 @@ public class Authorization extends BasePage {
     }
 
     public void authorizationPecLk(String locatorField, String firstCharacter, String login, String password) {
-        waitElement(locatorFieldInputLogin,5);
+        waitElement(locatorFieldInputLogin, 5);
         inputSendKeysCss(locatorFieldInputLogin, firstCharacter);
-        waitElement(locatorField,5);
+        waitElement(locatorField, 5);
         inputSendKeysCss(locatorField, login);
-        waitElement(locatorFieldPassword,5);
+        waitElement(locatorFieldPassword, 5);
         inputSendKeysCss(locatorFieldPassword, password);
         buttonClickCss(locatorButtonEnterLK);
-        waitElement(menuLK,10);
+        waitElement(menuLK, 10);
     }
 
     public void exitLk() {
