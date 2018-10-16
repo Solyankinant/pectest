@@ -17,42 +17,42 @@ public class AuthorizationFieldInput extends BaseTest{
         asert.assertEquals(getAuthorization().placeholderFieldPassword(),"Пароль");
         getAuthorization().closeWindowAuthorization();
 
-        getAuthorization().buttonClickCss(getAuthorization().locatorButtonOpenLK);
+        getAuthorization().openWindowAthorization();
         getAuthorization().inputFirstChar("9");
         Assert.assertTrue(getAuthorization().visibilityFieldPassword());
         Assert.assertTrue(getAuthorization().visibilitySelectCountryTel());
         asert.assertEquals(getAuthorization().placeholderFieldPassword(),"Пароль");
         getAuthorization().closeWindowAuthorization();
 
-        getAuthorization().buttonClickCss(getAuthorization().locatorButtonOpenLK);
+        getAuthorization().openWindowAthorization();
         getAuthorization().inputFirstChar("8");
         Assert.assertTrue(getAuthorization().visibilityFieldPassword());
         Assert.assertTrue(getAuthorization().visibilitySelectCountryTel());
         asert.assertEquals(getAuthorization().placeholderFieldPassword(),"Пароль");
         getAuthorization().closeWindowAuthorization();
 
-        getAuthorization().buttonClickCss(getAuthorization().locatorButtonOpenLK);
+        getAuthorization().openWindowAthorization();
         getAuthorization().inputFirstChar("7");
         Assert.assertTrue(getAuthorization().visibilityFieldPassword());
         Assert.assertTrue(getAuthorization().visibilitySelectCountryTel());
         asert.assertEquals(getAuthorization().placeholderFieldPassword(),"Пароль");
         getAuthorization().closeWindowAuthorization();
 
-        getAuthorization().buttonClickCss(getAuthorization().locatorButtonOpenLK);
+        getAuthorization().openWindowAthorization();
         getAuthorization().inputFirstChar("3");
         Assert.assertTrue(getAuthorization().visibilityFieldPassword());
         Assert.assertTrue(getAuthorization().visibilitySelectCountryTel());
         asert.assertEquals(getAuthorization().placeholderFieldPassword(),"Пароль");
         getAuthorization().closeWindowAuthorization();
 
-        getAuthorization().buttonClickCss(getAuthorization().locatorButtonOpenLK);
+        getAuthorization().openWindowAthorization();
         getAuthorization().inputFirstChar("1");
         Assert.assertTrue(getAuthorization().visibilityFieldPassword());
         Assert.assertFalse(getAuthorization().visibilitySelectCountryTel());
         asert.assertEquals(getAuthorization().placeholderFieldPassword(),"Пароль");
         getAuthorization().closeWindowAuthorization();
 
-        getAuthorization().buttonClickCss(getAuthorization().locatorButtonOpenLK);
+        getAuthorization().openWindowAthorization();
         getAuthorization().inputFirstChar("f");
         Assert.assertTrue(getAuthorization().visibilityFieldPassword());
         Assert.assertFalse(getAuthorization().visibilitySelectCountryTel());

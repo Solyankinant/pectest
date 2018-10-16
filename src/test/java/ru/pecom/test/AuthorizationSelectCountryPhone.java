@@ -13,7 +13,7 @@ public class AuthorizationSelectCountryPhone extends BaseTest{
         getAuthorization().inputFirstChar("+");
         Assert.assertTrue(getAuthorization().visibilitySelectCountryTel(),"Отсутствует кнопка выбора страны телефона");
         getAuthorization().openListSelectCountry();
-        Assert.assertTrue(getAuthorization().checkCountryInList("Россия2"),"В списке отсутствует страна Россия");
+        Assert.assertTrue(getAuthorization().checkCountryInList("Россия"),"В списке отсутствует страна Россия");
         Assert.assertTrue(getAuthorization().checkCountryInList("Казахстан"),"В списке отсутствует страна Казахстан");
         Assert.assertTrue(getAuthorization().checkCountryInList("Белоруссия"),"В списке отсутствует страна Белоруссия");
         getAuthorization().selectCountryPhone("Белоруссия");
