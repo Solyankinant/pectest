@@ -7,13 +7,14 @@ public class AuthorizationLoginLevelExtended extends BaseTest {
 
 
     @Test
-    public void AuthorizationTest() {
+    public void AuthorizationLoginTest() {
         getAuthorization().openWindowAthorization();
-        getAuthorization().authorizationPecLk(getAuthorization().locatorFieldInputLogin, "p", "ecomtest2", "pecomtest2");
-        Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorButtonOpenLK), "Выйти");
-        Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorLevelUser), "РАСШИРЕННЫЙ");
+        getAuthorization().inputLoginUser("pecomtest2");
+        getAuthorization().inputPassword("pecomtest2");
+        getAuthorization().clickButtonEnter();
+        Assert.assertTrue(getAuthorization().visibleLkMenu(), "Не появилось личное меню пользователя");
+        Assert.assertEquals(getAuthorization().getTextButtonLk(), "Выйти");
         getAuthorization().exitLk();
-
     }
 
 }

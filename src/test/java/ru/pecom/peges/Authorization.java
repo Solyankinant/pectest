@@ -1,7 +1,5 @@
 package ru.pecom.peges;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 
 public class Authorization extends BasePage {
@@ -29,15 +27,38 @@ public class Authorization extends BasePage {
         this.driver = driver;
     }
 
-    public void authorizationPecLk(String locatorField, String firstCharacter, String login, String password) {
-        waitElement(locatorFieldInputLogin, 5);
-        inputSendKeysCss(locatorFieldInputLogin, firstCharacter);
-        waitElement(locatorField, 5);
-        inputSendKeysCss(locatorField, login);
-        waitElement(locatorFieldPassword, 5);
-        inputSendKeysCss(locatorFieldPassword, password);
+    public void authorizationLoginPecLk() {
+        inputLoginUser("pecomtest1");
+        inputPassword("pecomtest1");
+        clickButtonEnter();
+        visibleLkMenu();
+    }
+
+    public void inputLoginUser(String login){
+        inputLogin(locatorFieldInputLogin,login);
+    }
+
+    public void inputPhoneUser(String phone){
+        inputPhone(locatorFieldInputLogin,filedInputPhone,phone);
+    }
+
+    public void inputPassword(String password){
+        inputInField(locatorFieldPassword, password);
+    }
+    public void clickButtonEnter(){
         buttonClickCss(locatorButtonEnterLK);
-        waitElement(menuLK, 10);
+    }
+
+    public boolean visibleLkMenu(){
+        return visibilityElementWait(menuLK, 10);
+    }
+
+    public String getTextButtonLk(){
+        return getTextCss(locatorButtonOpenLK);
+    }
+
+    public String textLevelUser(){
+        return getTextCss(locatorLevelUser);
     }
 
     public boolean visibilitySelectCountryTel(){

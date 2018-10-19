@@ -9,9 +9,11 @@ public class AuthorizationPhoneLevExtended extends BaseTest {
     @Test
     public void AuthorizationPhoneTest() {
         getAuthorization().openWindowAthorization();
-        getAuthorization().authorizationPecLk(getAuthorization().filedInputPhone, "9", "9876543210", "pecomtest2");
-        Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorButtonOpenLK), "Выйти");
-        Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorLevelUser), "РАСШИРЕННЫЙ");
+        getAuthorization().inputPhoneUser("89876543210");
+        getAuthorization().inputPassword("pecomtest2");
+        getAuthorization().clickButtonEnter();
+        Assert.assertTrue(getAuthorization().visibleLkMenu(), "Не появилось личное меню пользователя");
+        Assert.assertEquals(getAuthorization().getTextButtonLk(), "Выйти");
         getAuthorization().exitLk();
     }
 }

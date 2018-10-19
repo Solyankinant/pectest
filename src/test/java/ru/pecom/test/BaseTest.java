@@ -1,13 +1,8 @@
 package ru.pecom.test;
 
-import ru.pecom.peges.Authorization;
-import ru.pecom.peges.EventsFeed;
-import ru.pecom.peges.FieldSearchCargoInMenu;
-import ru.pecom.peges.Footer;
+import ru.pecom.peges.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-
-import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     ChromeDriver driver;
@@ -15,17 +10,21 @@ public class BaseTest {
     private FieldSearchCargoInMenu fieldSearchCargoInMenu;
     private Footer footer;
     private EventsFeed eventsFeed;
+    private Menu menusite;
+    private LKContent lkContent;
 
     @BeforeMethod
     public void openSitePec() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         authorization = new Authorization(driver);
         fieldSearchCargoInMenu = new FieldSearchCargoInMenu(driver);
         footer = new Footer(driver);
         eventsFeed = new EventsFeed(driver);
+        menusite = new Menu(driver);
+        lkContent = new LKContent(driver);
         driver.get("http://192.168.111.62/#/");
     }
 
@@ -53,6 +52,10 @@ public class BaseTest {
     public EventsFeed getEventsFeed() {
         return eventsFeed;
     }
+
+    public Menu getMenusite(){return menusite;}
+
+    public LKContent getLkContent(){return lkContent;}
 
 
 }

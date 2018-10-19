@@ -36,11 +36,21 @@ public class BasePage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(locator)));
     }
 
+    public void waitElementTextToBe(String locator, int timeOut, String text) {
+        final WebDriverWait wait = new WebDriverWait(driver, timeOut);
+        wait.until(ExpectedConditions.textToBePresentInElementValue(By.cssSelector(locator), text));
+    }
+
+    public void waitElementClickable(String locator, int timeOut) {
+        final WebDriverWait wait = new WebDriverWait(driver, timeOut);
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(locator)));
+    }
+
     public String getAttribute(String locatorCss, String attribute) {
         return driver.findElement(By.cssSelector(locatorCss)).getAttribute(attribute);
     }
 
-    public String placeholderField(String locator) {
+    public String getPlaceholderField(String locator) {
         return getAttribute(locator, "placeholder");
     }
 
@@ -54,6 +64,8 @@ public class BasePage {
     }
 
     public void inputSendKeysCss(String locator, String text) {
+        waitElementClickable(locator, 5);
+        /*driver.findElement(By.cssSelector(locator)).clear();*/
         driver.findElement(By.cssSelector(locator)).sendKeys(text);
     }
 
@@ -63,6 +75,10 @@ public class BasePage {
 
     public String getTextCss(String locator) {
         return driver.findElement(By.cssSelector(locator)).getText();
+    }
+
+    public String getTextXpath(String locator) {
+        return driver.findElement(By.xpath(locator)).getText();
     }
 
     public void clickButtonElementList(String locatorCss, String textSelect) {
@@ -78,22 +94,85 @@ public class BasePage {
     public boolean comparisonElementList(String locatorCss, String text) {
         List<WebElement> list = driver.findElements(By.cssSelector(locatorCss));
         for (int i = 0; i < list.size(); i++) {
+            //System.out.println(list.get(4).getText());
             if (text.equals(list.get(i).getText())) {
+                moveTo(list.get(i));
                 return true;
             }
         }
         return false;
     }
 
-    public boolean visibilityElement(String locator) {
+
+    public boolean visibilityElementWait(String locator, int waitTime) {
         try {
-            waitElement(locator, 5);
+            waitElement(locator, waitTime);
             return true;
         } catch (TimeoutException e) {
             return false;
 
         }
     }
+
+    public boolean visibilityElement(String locator) {
+        if (driver.findElements(By.cssSelector(locator)).size() != 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public String getUrlPage() {
+        return driver.getCurrentUrl();
+    }
+
+    public void inputLogin(String locatorFieldInputLogin, String login) {
+        for (int i = 0; i < login.length(); i++) {
+            char sing = login.charAt(i);
+            String singStr = Character.toString(sing);
+            inputSendKeysCss(locatorFieldInputLogin, singStr);
+            waitElementTextToBe(locatorFieldInputLogin, 1, singStr);
+        }
+    }
+
+    public void inputPhone(String locatorFieldInput, String locatorFieldInputPhone, String phone) {
+        char sing = phone.charAt(0);
+        String singStr = Character.toString(sing);
+        inputSendKeysCss(locatorFieldInput, singStr);
+        if (singStr.contains("+")) {
+            singStr = "+7";
+        }
+        if (singStr.contains("8")) {
+            singStr = "+7";
+        }
+        if (singStr.contains("9")) {
+            singStr = "+7";
+        }
+        if (singStr.contains("7")) {
+            singStr = "+7";
+        }
+        if (singStr.contains("3")) {
+            singStr = "+7";
+        }
+        waitElementTextToBe(locatorFieldInput, 1, singStr);
+        waitElementClickable(locatorFieldInputPhone, 1);
+        for (int i = 1; i < phone.length(); i++) {
+            sing = phone.charAt(i);
+            String singString = Character.toString(sing);
+            inputSendKeysCss(locatorFieldInputPhone, singString);
+            waitElementTextToBe(locatorFieldInputPhone, 1, singString);
+        }
+    }
+
+    public void inputInField(String fieldInput, String textInput) {
+        for (int i = 0; i < textInput.length(); i++) {
+            char sing = textInput.charAt(i);
+            String singStr = Character.toString(sing);
+            inputSendKeysCss(fieldInput, singStr);
+        }
+    }
+
+
 
 
 }

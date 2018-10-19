@@ -1,43 +1,34 @@
 package ru.pecom.test;
 
-import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 
 public class MenuTest extends BaseTest {
-    private String testEvents = "СОБЫТИЯ";
-    private String testBranches = "ФИЛИАЛЫ";
-    private String testRequestButton = "Подать заявку";
-    private String testButtonAuthoriz = "Личный кабинет";
-    private String text = "БИЗНЕСУ\n" +
-            "ЧАСТНЫМ ЛИЦАМ\n" +
-            "НАПРАВЛЕНИЯ\n" +
-            "СЕРВИСЫ\n" +
-            "УСЛУГИ\n" +
-            "УСЛОВИЯ ПЕРЕВОЗКИ\n" +
-            "ГОРЯЧАЯ ЛИНИЯ\n" +
-            "КАЛЬКУЛЯТОР\n" +
-            "МВКОБЖШ-1/1808";
-
 
     @Test
     public void HatSite() {
 
+        SoftAssert asert = new SoftAssert();
 
-        driver.findElement(By.cssSelector(".logo"));
-        driver.findElement(By.cssSelector(".city-name"));
-        driver.findElement(By.cssSelector(".fa-location-arrow"));
-        driver.findElement(By.cssSelector(".phone-link"));
-        Assert.assertEquals(driver.findElement(By.xpath(".//i[@class=\"fas fa-map-marker-alt\"]/../span")).getText(), testBranches);
-        Assert.assertEquals(driver.findElement(By.cssSelector(".buttonOpenNews span")).getText(), testEvents);
-        Assert.assertEquals(driver.findElement(By.cssSelector(".btn-secondary")).getText(), testRequestButton);
-        Assert.assertEquals(driver.findElement(By.cssSelector(".buttonOpenLK")).getText(), testButtonAuthoriz);
-        Assert.assertEquals(driver.findElement(By.cssSelector(".bottom-nav")).getText(), text);
-//        System.out.println(driver.findElement(By.cssSelector(".top-nav")).getText());
+        asert.assertTrue(getMenusite().visibleLogoSite(), "Logo отсутствует");
+        asert.assertTrue(getMenusite().visibleCityUser(), "CityUser отсутствует");
+        asert.assertTrue(getMenusite().ikonArrow(), "ikon Arrow отсутствует");
+        asert.assertTrue(getMenusite().phoneDepartment(), "phone Department отсутствует");
+        asert.assertEquals(getMenusite().capLinkBranchs(), "ФИЛИАЛЫ");
+        asert.assertEquals(getMenusite().capLinkEvents(), "СОБЫТИЯ");
+        asert.assertEquals(getMenusite().capButtonRequest(), "Подать заявку");
+        asert.assertEquals(getMenusite().capButtonLK(), "Личный кабинет");
+        asert.assertTrue(getMenusite().menuSiteList("БИЗНЕСУ"), "Отсутствует элемент меню БИЗНЕСУ");
+        asert.assertTrue(getMenusite().menuSiteList("ЧАСТНЫМ ЛИЦАМ"), "Отсутствует элемент меню ЧАСТНЫМ ЛИЦАМ");
+        asert.assertTrue(getMenusite().menuSiteList("НАПРАВЛЕНИЯ"), "Отсутствует элемент меню НАПРАВЛЕНИЯ");
+        asert.assertTrue(getMenusite().menuSiteList("СЕРВИСЫ"), "Отсутствует элемент меню СЕРВИСЫ");
+        asert.assertTrue(getMenusite().menuSiteList("УСЛУГИ"), "Отсутствует элемент меню УСЛУГИ");
+        asert.assertTrue(getMenusite().menuSiteList("УСЛОВИЯ ПЕРЕВОЗКИ"), "Отсутствует элемент меню УСЛОВИЯ ПЕРЕВОЗКИ");
+        asert.assertTrue(getMenusite().menuSiteList("ГОРЯЧАЯ ЛИНИЯ"), "Отсутствует элемент меню ГОРЯЧАЯ ЛИНИЯ");
+        asert.assertTrue(getMenusite().menuSiteList("КАЛЬКУЛЯТОР"), "Отсутствует элемент меню КАЛЬКУЛЯТОР");
 
-
-
+        asert.assertAll();
 
     }
 
