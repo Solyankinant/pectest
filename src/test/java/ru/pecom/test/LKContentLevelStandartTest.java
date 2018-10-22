@@ -8,7 +8,6 @@ public class LKContentLevelStandartTest extends BaseTest {
     public void testLkContentLevelStandart(){
 
         SoftAssert asert = new SoftAssert();
-        getAuthorization().openWindowAthorization();
         getAuthorization().authorizationLoginPecLk();
         asert.assertTrue(getLkContent().avatar(),"Отсутствует img аватара user");
         asert.assertEquals(getLkContent().textBlockLevel(),"Ваш уровень доступа: СТАНДАРТНЫЙ", "Ошибка, уведомление об уровне доступа пользователя");

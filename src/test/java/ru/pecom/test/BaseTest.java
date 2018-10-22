@@ -12,6 +12,9 @@ public class BaseTest {
     private EventsFeed eventsFeed;
     private Menu menusite;
     private LKContent lkContent;
+    private FloatingButtons floatButtons;
+    private RecoveryPassword recoveryPassword;
+    private WindowChangePassword changePassword;
 
     @BeforeMethod
     public void openSitePec() {
@@ -25,6 +28,9 @@ public class BaseTest {
         eventsFeed = new EventsFeed(driver);
         menusite = new Menu(driver);
         lkContent = new LKContent(driver);
+        floatButtons = new FloatingButtons(driver);
+        recoveryPassword = new RecoveryPassword(driver);
+        changePassword = new WindowChangePassword(driver);
         driver.get("http://192.168.111.62/#/");
     }
 
@@ -56,6 +62,10 @@ public class BaseTest {
     public Menu getMenusite(){return menusite;}
 
     public LKContent getLkContent(){return lkContent;}
+
+    public  FloatingButtons getFloatButtons(){ return floatButtons;}
+    public RecoveryPassword getRecoveryPassword(){return recoveryPassword;}
+    public WindowChangePassword getChangePassword(){return changePassword;}
 
 
 }

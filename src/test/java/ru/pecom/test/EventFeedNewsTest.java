@@ -5,7 +5,7 @@ import org.testng.asserts.SoftAssert;
 
 public class EventFeedNewsTest extends BaseTest{
     @Test
-    public void eventFeedNews(){
+    public void testEventFeedNews(){
 
         SoftAssert asert = new SoftAssert();
         asert.assertTrue(getEventsFeed().visibleButtonEvents(),"Кнопка СОБЫТИЯ не найдена");
@@ -14,7 +14,6 @@ public class EventFeedNewsTest extends BaseTest{
         asert.assertFalse(getEventsFeed().comparisonNameEvent("Грузы/Заявки"),"Авторизации нет. Присутвуют события типа Грызы/Заявки");
         asert.assertFalse(getEventsFeed().comparisonNameEvent("Управление доверенностями"),"Авторизации нет. Присутвуют события типа Управление доверенностями");
         asert.assertFalse(getEventsFeed().comparisonNameEvent("Обратная связь"), "Авторизации нет. Присутвуют события типа Обратная связь");
-        getAuthorization().openWindowAthorization();
         getAuthorization().authorizationLoginPecLk();
         asert.assertTrue(getEventsFeed().visibleButtonEvents(),"Кнопка СОБЫТИЯ не найдена");
         getEventsFeed().openFeedEvents();

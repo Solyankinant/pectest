@@ -7,7 +7,7 @@ public class AuthorizationLoginLevelStandard extends BaseTest {
 
 
     @Test
-    public void AuthorizationLoginPecTest() {
+    public void testAuthorizationLoginPecTest() {
         getAuthorization().openWindowAthorization();
         getAuthorization().inputLoginUser("pecomtest1");
         getAuthorization().inputPassword("pecomtest1");

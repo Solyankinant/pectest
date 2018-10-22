@@ -7,7 +7,7 @@ import org.testng.asserts.SoftAssert;
 public class MenuTest extends BaseTest {
 
     @Test
-    public void HatSite() {
+    public void testHatSite() {
 
         SoftAssert asert = new SoftAssert();
 

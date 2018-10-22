@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class WindowAuthorization extends BaseTest {
     @Test
-    public void windowAtuhorizationTest() {
+    public void testWindowAtuhorization() {
         getAuthorization().openWindowAthorization();
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().titlewindow), "АВТОРИЗАЦИЯ");
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().locatorIconClose), "×");
@@ -13,5 +13,6 @@ public class WindowAuthorization extends BaseTest {
         Assert.assertEquals(getAuthorization().getAttribute(getAuthorization().locatorFieldInputLogin, "placeholder"), "Логин или телефон");
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().textButtonEnter), "Войти");
         Assert.assertEquals(getAuthorization().getTextCss(getAuthorization().linkLosePassword), "Забыли пароль?");
+
     }
 }

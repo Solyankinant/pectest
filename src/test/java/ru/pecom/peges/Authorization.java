@@ -28,6 +28,7 @@ public class Authorization extends BasePage {
     }
 
     public void authorizationLoginPecLk() {
+        openWindowAthorization();
         inputLoginUser("pecomtest1");
         inputPassword("pecomtest1");
         clickButtonEnter();
@@ -103,6 +104,11 @@ public class Authorization extends BasePage {
 
     public boolean checkCountryInList(String country){
         return comparisonElementList(CountryPhoneInList,country);
+    }
+
+    public void openWindowRecoveryPassword(){
+        openWindowAthorization();
+        buttonClickCss(linkLosePassword);
     }
 
 }

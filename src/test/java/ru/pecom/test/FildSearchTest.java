@@ -9,7 +9,7 @@ public class FildSearchTest extends BaseTest {
 
 
     @Test
-    public void fildSearch() {
+    public void testFildSearch() {
 
         SoftAssert asert = new SoftAssert();
         asert.assertEquals(getFieldSearchCargoInMenu().textPlaceholderFild(),"МВКОБЖШ-1/1808");

@@ -7,7 +7,7 @@ public class AuthorizationPhoneLevExtended extends BaseTest {
 
 
     @Test
-    public void AuthorizationPhoneTest() {
+    public void testAuthorizationPhoneTest() {
         getAuthorization().openWindowAthorization();
         getAuthorization().inputPhoneUser("89876543210");
         getAuthorization().inputPassword("pecomtest2");

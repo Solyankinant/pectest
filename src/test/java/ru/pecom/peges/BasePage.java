@@ -1,15 +1,11 @@
 package ru.pecom.peges;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 public class BasePage {
     protected WebDriver driver;
@@ -33,12 +29,16 @@ public class BasePage {
 
     public void waitElement(String locator, int timeOut) {
         final WebDriverWait wait = new WebDriverWait(driver, timeOut);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(locator)));
+        wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(locator))));
     }
 
     public void waitElementTextToBe(String locator, int timeOut, String text) {
         final WebDriverWait wait = new WebDriverWait(driver, timeOut);
         wait.until(ExpectedConditions.textToBePresentInElementValue(By.cssSelector(locator), text));
+    }
+    public void waitElementTextToBe(WebElement element, int timeOut, String text) {
+        final WebDriverWait wait = new WebDriverWait(driver, timeOut);
+        wait.until(ExpectedConditions.textToBePresentInElementValue(element, text));
     }
 
     public void waitElementClickable(String locator, int timeOut) {
@@ -74,7 +74,11 @@ public class BasePage {
     }
 
     public String getTextCss(String locator) {
-        return driver.findElement(By.cssSelector(locator)).getText();
+        try {
+            return driver.findElement(By.cssSelector(locator)).getText();
+        }catch (NoSuchElementException e){
+            return null;
+        }
     }
 
     public String getTextXpath(String locator) {
@@ -116,6 +120,14 @@ public class BasePage {
 
     public boolean visibilityElement(String locator) {
         if (driver.findElements(By.cssSelector(locator)).size() != 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean elementIsEnable(WebElement element) {
+        if (element.isEnabled()) {
             return true;
         } else {
             return false;
