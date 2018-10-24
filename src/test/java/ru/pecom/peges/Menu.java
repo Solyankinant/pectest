@@ -9,14 +9,14 @@ public class Menu extends BasePage{
     private String locatorLinkEvents = ".buttonOpenNews span";
     private String locatorRequestButton = ".btn-secondary";
     private String locatorButtonLK = ".buttonOpenLK";
-    private String locatorMenuSite = ".nav .nav-linkNotLogin";
+    private String locatorMenuSite = ".nav .nav-link";
 
     public Menu(WebDriver driver) {
         super(driver);
     }
 
     public boolean phoneDepartment() {
-        driver.findElement(By.cssSelector(".phone-linkNotLogin"));
+        driver.findElement(By.cssSelector(".phone-link"));
         return true;
     }
 

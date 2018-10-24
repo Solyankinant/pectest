@@ -35,35 +35,34 @@ public class RecoveryPasswordOnPhoneTest extends BaseTest {
         getAuthorization().openWindowRecoveryPassword();
         getAuthorization().inputPhoneUser("898765");
         getRecoveryPassword().buttonNext.click();
-        /*asert.assertEquals(getRecoveryPassword().elementTextError.getText(),"Неверный формат");*/
+        asert.assertEquals(getRecoveryPassword().textError(),"Неверный формат");
         getRecoveryPassword().buttonCloseWindow.click();
         getAuthorization().openWindowRecoveryPassword();
         getAuthorization().inputPhoneUser("89111111111");
         getRecoveryPassword().buttonNext.click();
-        /*asert.assertEquals(getRecoveryPassword().elementTextError.getText(),"Телефон не найден!");*/
+        asert.assertEquals(getRecoveryPassword().textError(),"Телефон не найден!");
         getRecoveryPassword().buttonCloseWindow.click();
         getAuthorization().openWindowRecoveryPassword();
         getAuthorization().inputPhoneUser("89876543210");
         getRecoveryPassword().buttonNext.click();
         asert.assertEquals(getChangePassword().textTitle(),"СМЕНА ПАРОЛЯ");
         asert.assertEquals(getChangePassword().textFirstNotify(),"На номер +7 (987) 654-32-10 выслан код подтверждения");
-        /*asert.assertEquals(getChangePassword().textSecondNotify(),"Не пришел код? Запросить повторно через 30 секунд");*/                  //нет уведомления
+        asert.assertEquals(getChangePassword().textSecondNotify(),"Не пришел код? Запросить повторно через 30 секунд");                  //нет уведомления
         asert.assertEquals(getChangePassword().textFieldCodeSms(),"Код подтверждения");
         asert.assertEquals(getChangePassword().textFieldNewPassword(),"Новый пароль");                                             //по ТЗ нет placeholder
         asert.assertEquals(getChangePassword().textFieldNewPasswordRetern(),"Новый пароль еще раз");                                //по ТЗ нет placeholder
         asert.assertTrue(getChangePassword().presentButton(),"Отсутствует кнопка Сохранить");
         asert.assertEquals(getChangePassword().textButton(),"Сохранить");
-        /*asert.assertTrue(getChangePassword().linkRepeatCode(),"Не появилась ссылка Запросить повторно"); */                           //нет уведомления
+        asert.assertTrue(getChangePassword().linkRepeatCode(),"Не появилась ссылка Запросить повторно");                            //нет уведомления
+        asert.assertEquals(getChangePassword().textLinkRepeatCodeSms(),"Запросить повторно");
         getChangePassword().inputCodeSms("0000");
-        asert.assertEquals(getChangePassword().textErrorCode(),"Неверный код подтверждения");                                 // нет сообщения об ошибке
-
-
-
-
-
-
-
-
+        getChangePassword().clickButtonSave();
+        /*asert.assertEquals(getChangePassword().textErrorCode(),"Неверный код подтверждения");    // нет сообщения об ошибке*/
+        asert.assertEquals(getChangePassword().textErrorPassword(),"Обязательное поле","Пустое поле пароль");
+        getChangePassword().inputPassword("password");
+        getChangePassword().inputPasswordRepeat("pecomtest2");
+        getChangePassword().clickButtonSave();
+        asert.assertEquals(getChangePassword().textErrorPassword(),"Пароли не совпадают");
 
         asert.assertAll();
     }

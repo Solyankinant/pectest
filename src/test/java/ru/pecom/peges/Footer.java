@@ -20,7 +20,7 @@ public class Footer extends BasePage{
     private String locatorIkonLinkFeceBook = "[href=\"https://www.facebook.com/pecom.ru\"]";
     private String locatorIkonLinkTeleg = "[href=\"/services-are/telegram/\"]";
     private String locatorTextButtonComment = ".btn-recall span";
-    private String locatorLinkDownFooter = ".copy-linkNotLogin";
+    private String locatorLinkDownFooter = ".copy-link";
     private String locatorTextDownFooter = ".col-sm-7";
     private String locatorLinkSafePersonInfor = "[href=\"https://pecom.ru/info/o-zashchite-personalnykh-dannykh/\"]";
     private String locatorLinkGooglePlay = "[href=\"https://play.google.com/store/apps/details?id=ru.pecom." +

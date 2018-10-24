@@ -15,6 +15,8 @@ public class BaseTest {
     private FloatingButtons floatButtons;
     private RecoveryPassword recoveryPassword;
     private WindowChangePassword changePassword;
+    private NewCasePage newCasePage;
+    private FeedbackPage feedbackPage;
 
     @BeforeMethod
     public void openSitePec() {
@@ -31,6 +33,8 @@ public class BaseTest {
         floatButtons = new FloatingButtons(driver);
         recoveryPassword = new RecoveryPassword(driver);
         changePassword = new WindowChangePassword(driver);
+        newCasePage = new NewCasePage(driver);
+        feedbackPage = new FeedbackPage(driver);
         driver.get("http://192.168.111.62/#/");
     }
 
@@ -66,6 +70,8 @@ public class BaseTest {
     public  FloatingButtons getFloatButtons(){ return floatButtons;}
     public RecoveryPassword getRecoveryPassword(){return recoveryPassword;}
     public WindowChangePassword getChangePassword(){return changePassword;}
+    public NewCasePage getNewCasePage(){return newCasePage;}
+    public FeedbackPage getFeedbackPage(){return feedbackPage;}
 
 
 }

@@ -1,6 +1,5 @@
 package ru.pecom.peges;
 
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 public class WindowChangePassword extends BasePage{
@@ -12,7 +11,9 @@ public class WindowChangePassword extends BasePage{
     private String locatorFieldNewPasswordRepeat = "[type=\"password\"]:nth-of-type(2)";
     private String locatorButtonSave = ".btn-save";
     private String locatorLinkRepeatCode = ".modal-link";
-    private String locatorTextErrorCode = ".error-message";
+    private String locatorTextErrorPassword = ".error-message:nth-child(2)";
+    /*private String locatorTextErrorCode = ".error-message:nth-child(1)";*/
+
 
     public WindowChangePassword(WebDriver driver) {
         super(driver);
@@ -23,7 +24,6 @@ public class WindowChangePassword extends BasePage{
     }
 
     public String textSecondNotify(){
-        System.out.println(getTextCss(locatorTextDownNotify));
         return getTextCss(locatorTextDownNotify);
     }
 
@@ -63,8 +63,31 @@ public class WindowChangePassword extends BasePage{
         inputSendKeysCss(locatorFieldCodeSms, code);
     }
 
-    public String textErrorCode(){
+    /*public String textErrorCode(){
             return getTextCss(locatorTextErrorCode);
+    }*/
+    public String textErrorPassword(){
+        return getTextCss(locatorTextErrorPassword);
     }
+
+    public String textLinkRepeatCodeSms(){
+        return getTextCss(locatorLinkRepeatCode);
+    }
+
+    public void clickButtonSave(){
+        buttonClickCss(locatorButtonSave);
+    }
+
+    public void inputPassword(String newPassword){
+        inputSendKeysCss(locatorFieldNewPassword,newPassword);
+    }
+
+    public void inputPasswordRepeat(String repeatNewPassword){
+        inputSendKeysCss(locatorFieldNewPasswordRepeat,repeatNewPassword);
+    }
+
+
+
+
 
 }

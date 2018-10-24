@@ -46,6 +46,12 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(locator)));
     }
 
+    public void waitElementInvisibility(String locator, int timeOut) {
+        final WebDriverWait wait = new WebDriverWait(driver, timeOut);
+        wait.until(ExpectedConditions
+                .invisibilityOfElementLocated(By.cssSelector(locator)));
+    }
+
     public String getAttribute(String locatorCss, String attribute) {
         return driver.findElement(By.cssSelector(locatorCss)).getAttribute(attribute);
     }
@@ -56,6 +62,7 @@ public class BasePage {
 
 
     public void buttonClickCss(String locator) {
+        waitElementClickable(locator,5);
         driver.findElement(By.cssSelector(locator)).click();
     }
 

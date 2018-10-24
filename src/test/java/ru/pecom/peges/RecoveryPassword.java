@@ -10,7 +10,7 @@ public class RecoveryPassword extends BasePage {
     private String locatorIkonCloseWindow = ".close span";
     private String locatorTextNotify = ".col-md-7 .text-center";
     private String locatorFieldInput = ".form-control-pecom";
-    /*private String locatorTextError = ".error-message";*/
+    private String locatorTextError = ".error-message";
     /*private String locatorButtonCloseWindow = ".close";
     private String locatorButtonNext = ".btn-next";
     private String locatorLink = ".modal-link";*/
@@ -20,8 +20,6 @@ public class RecoveryPassword extends BasePage {
     public WebElement buttonNext;
     @FindBy(css = ".modal-link")
     public WebElement linkNotLogin;
-    @FindBy(css = ".error-message")
-    public WebElement elementTextError;
     @FindBy(css = ".form-control-pecom")
     public WebElement fieldInput;
     @FindBy(css = "#dropdownMenuButton")
@@ -36,33 +34,37 @@ public class RecoveryPassword extends BasePage {
     }
 
     public String textTitle() {
-
         return getTextCss(locatorTextTitleWindow);
     }
 
     public String textNotify() {
+
         return getTextCss(locatorTextNotify);
     }
 
     public boolean presentIkonCloseWindow() {
+
         return visibilityElement(locatorIkonCloseWindow);
     }
 
     public String textPlaceholderField() {
+
         return getAttribute(locatorFieldInput, "placeholder");
     }
 
     public String textLinkNotLogin() {
+
         return linkNotLogin.getText();
     }
 
+
     /*public boolean presentButtonNext(){
         return elementIsEnable(buttonNext);
-    }
+    }*/
 
     public String textError(){
-        return elementTextError.getText();
-    }*/
+        return getTextCss(locatorTextError);
+    }
 
     public boolean showInField(String expected) {
         try {
@@ -71,6 +73,10 @@ public class RecoveryPassword extends BasePage {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    public void inputLoginUser(String login){
+        inputLogin(locatorFieldInput,login);
     }
 
 
